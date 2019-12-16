@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">foodCubesMerchant</string>
+    <string name="friday">friday</string>
+    <string name="saturday">saturday</string>
+    <string name="sunday">sunday</string>
+    <string name="thursday">thursday</string>
+    <string name="wednesday">wednesday</string>
+    <string name="tuesday">tuesday</string>
+    <string name="monday">Monday</string>
+</resources>
