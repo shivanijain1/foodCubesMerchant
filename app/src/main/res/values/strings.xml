@@ -7,4 +7,14 @@
     <string name="wednesday">wednesday</string>
     <string name="tuesday">tuesday</string>
     <string name="monday">Monday</string>
+    <string name="dinner">dinner</string>
+    <string name="lunch">lunch</string>
+    <string name="breakfast">breakfast</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_menu">activity_menu</string>
 </resources>
