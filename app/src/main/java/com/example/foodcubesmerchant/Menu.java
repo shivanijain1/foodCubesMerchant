@@ -1,6 +1,7 @@
 package com.example.foodcubesmerchant;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -46,7 +47,8 @@ public class Menu extends AppCompatActivity {
                 viewpager.setCurrentItem(2);
             }
         });
-
+       // getSupportActionBar().setTitle("Menu");
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
