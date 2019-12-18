@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         newActivity = new Intent(MainActivity.this, Menu.class);
         toolbar=findViewById(R.id.days);
         toolbar.inflateMenu(R.menu.menuitem);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mon = findViewById(R.id.Monday);
         tues = findViewById(R.id.Tuesday);
         wednes = findViewById(R.id.Wednesday);

@@ -31,7 +31,7 @@ public class Menu extends AppCompatActivity {
         dinner = findViewById(R.id.Dinner);
         // newActivity = new Intent(Menu.this, toolbar.class);
         //startActivity(newActivity);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         viewpager = findViewById(R.id.viewpager);
         pagerViewAdapter = new PagerViewAdapter(getSupportFragmentManager());
