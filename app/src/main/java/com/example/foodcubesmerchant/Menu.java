@@ -31,10 +31,13 @@ public class Menu extends AppCompatActivity {
         dinner = findViewById(R.id.Dinner);
         // newActivity = new Intent(Menu.this, toolbar.class);
         //startActivity(newActivity);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         viewpager = findViewById(R.id.viewpager);
         pagerViewAdapter = new PagerViewAdapter(getSupportFragmentManager());
         viewpager.setAdapter(pagerViewAdapter);
+
+
        // tabLayout.setupWithViewPager(viewpager);
      /* breakfast.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,7 +86,8 @@ public class Menu extends AppCompatActivity {
             }
         });
         // getSupportActionBar().setTitle("Menu");
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
 
 
 

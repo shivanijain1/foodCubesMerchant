@@ -9,11 +9,13 @@
     tools:context=".MainActivity">
 
     <Toolbar
+        android:id="@+id/days"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:title="DAYS"
         tools:targetApi="lollipop"
+        android:theme="@style/MyPopupTheme"
         android:titleTextColor="@android:color/white"
         android:layout_gravity="center_horizontal"/>
     <Button

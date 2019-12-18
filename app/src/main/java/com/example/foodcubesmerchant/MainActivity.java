@@ -1,11 +1,14 @@
 package com.example.foodcubesmerchant;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -17,11 +20,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button fri ;
     Button sat ;
     Button sun ;
+    Toolbar toolbar;
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         newActivity = new Intent(MainActivity.this, Menu.class);
+        toolbar=findViewById(R.id.days);
+        toolbar.inflateMenu(R.menu.menuitem);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mon = findViewById(R.id.Monday);
         tues = findViewById(R.id.Tuesday);
         wednes = findViewById(R.id.Wednesday);
@@ -36,7 +44,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fri.setOnClickListener(this);
         sat.setOnClickListener(this);
         sun.setOnClickListener(this);
+
     }
+
+  /*  @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.menuitem,menu);
+        return super.onCreateOptionsMenu(menu);
+    }*/
+
+
 
     @Override
     public void onClick(View v) {
