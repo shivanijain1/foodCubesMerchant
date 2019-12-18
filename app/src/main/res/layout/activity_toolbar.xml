@@ -3,24 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:id="@+id/abc"
+    android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".Menu">
-    <TextView
-        android:id="@+id/Breakfast"
-        android:layout_width="wrap_content"
-        android:layout_weight="1"
-        android:layout_height="wrap_content"
-        android:text="@string/breakfast"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
-        android:textAllCaps="true"/>
+
     <TextView
 
-        android:id="@+id/Lunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:text="@string/breakfast"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <TextView
+
+
         android:layout_width="wrap_content"
         android:layout_weight="1"
         android:layout_height="wrap_content"
@@ -31,7 +32,7 @@
         android:textAllCaps="true"/>
 
     <TextView
-        android:id="@+id/Dinner"
+
         android:layout_width="wrap_content"
         android:layout_weight="1"
         android:layout_height="wrap_content"

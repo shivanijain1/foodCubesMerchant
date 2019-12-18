@@ -11,8 +11,8 @@
         android:id="@+id/Breakfast"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/breakfast"
         android:gravity="center"
-        android:textAllCaps="true"/>
+        android:text="@string/breakfast"
+        android:textAllCaps="true" />
 
 </RelativeLayout>

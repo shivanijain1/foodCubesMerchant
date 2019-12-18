@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        newActivity = new Intent(MainActivity.this,Menu.class);
+        newActivity = new Intent(MainActivity.this, Menu.class);
         mon = findViewById(R.id.Monday);
         tues = findViewById(R.id.Tuesday);
         wednes = findViewById(R.id.Wednesday);

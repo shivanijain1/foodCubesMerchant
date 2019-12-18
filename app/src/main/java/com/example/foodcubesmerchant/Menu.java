@@ -10,26 +10,33 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
+
 public class Menu extends AppCompatActivity {
-    TextView breakfast, lunch, dinner;
+    TabItem breakfast,lunch,dinner;
+    Toolbar toolbar;
+    TabLayout tabLayout;
     ViewPager viewpager;
-    PagerViewAdapter pagerViewAdapter;
+   PagerViewAdapter pagerViewAdapter;
     // Intent newActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        tabLayout = findViewById(R.id.tabs);
         breakfast = findViewById(R.id.Breakfast);
         lunch = findViewById(R.id.Lunch);
         dinner = findViewById(R.id.Dinner);
         // newActivity = new Intent(Menu.this, toolbar.class);
         //startActivity(newActivity);
 
-        viewpager = findViewById(R.id.toolbar);
+        viewpager = findViewById(R.id.viewpager);
         pagerViewAdapter = new PagerViewAdapter(getSupportFragmentManager());
         viewpager.setAdapter(pagerViewAdapter);
-        breakfast.setOnClickListener(new View.OnClickListener() {
+       // tabLayout.setupWithViewPager(viewpager);
+     /* breakfast.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewpager.setCurrentItem(0);
@@ -47,33 +54,43 @@ public class Menu extends AppCompatActivity {
                 viewpager.setCurrentItem(2);
             }
         });
-       // getSupportActionBar().setTitle("Menu");
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+*/
+     viewpager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                onPageSelected(position);
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewpager.setCurrentItem(tab.getPosition());
+                if (tab.getPosition() == 0) {
+                    pagerViewAdapter.notifyDataSetChanged();
+                }
+                if (tab.getPosition() == 1) {
+                    pagerViewAdapter.notifyDataSetChanged();
+                }
+                if (tab.getPosition() == 2) {
+                    pagerViewAdapter.notifyDataSetChanged();
+                }
             }
 
             @Override
-            public void onPageSelected(int position) {
-                onChangeTab (position);
+            public void onTabUnselected(TabLayout.Tab tab) {
+
             }
 
             @Override
-            public void onPageScrollStateChanged(int state) {
+            public void onTabReselected(TabLayout.Tab tab) {
 
             }
         });
-    }
+        // getSupportActionBar().setTitle("Menu");
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-    private void onChangeTab(int position) {
-      /*  if (position==0) Toast.makeText(this, "breakfast", Toast.LENGTH_LONG).show();
-        if (position==1) Toast.makeText(this, "lunch", Toast.LENGTH_LONG).show();
-        if (position==2) Toast.makeText(this, "dinner", Toast.LENGTH_LONG).show();*/
+
 
     }
+
+
 
 }
+
 

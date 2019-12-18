@@ -2,18 +2,39 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Menu" >
 
-    <include layout="@layout/activity_toolbar" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Breakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Breakfast" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Lunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lunch" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dinner" />
+    </com.google.android.material.tabs.TabLayout>
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/toolbar"
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="10dp" />
+        />
+
+
 </RelativeLayout>
