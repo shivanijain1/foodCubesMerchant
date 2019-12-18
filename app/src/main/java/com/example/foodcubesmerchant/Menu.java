@@ -1,5 +1,7 @@
 package com.example.foodcubesmerchant;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
@@ -29,8 +31,13 @@ public class Menu extends AppCompatActivity {
         breakfast = findViewById(R.id.Breakfast);
         lunch = findViewById(R.id.Lunch);
         dinner = findViewById(R.id.Dinner);
+        toolbar = findViewById(R.id.toolBar);
+        toolbar.setTitle("MENU");
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // newActivity = new Intent(Menu.this, toolbar.class);
         //startActivity(newActivity);
+
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         viewpager = findViewById(R.id.viewpager);
@@ -93,8 +100,11 @@ public class Menu extends AppCompatActivity {
 
     }
 
-
-
+    @Override
+    public boolean onCreateOptionsMenu(android.view.Menu menu) {
+        getMenuInflater().inflate(R.menu.menuitem,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 }
 
 
