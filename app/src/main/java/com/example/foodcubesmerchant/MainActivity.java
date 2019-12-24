@@ -2,13 +2,13 @@ package com.example.foodcubesmerchant;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -27,8 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         newActivity = new Intent(MainActivity.this, Menu.class);
-        toolbar=findViewById(R.id.days);
+        toolbar=findViewById(R.id.mainToolBar);
         toolbar.inflateMenu(R.menu.menuitem);
+        toolbar.setTitle("DAYS");
+        //toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_material);
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mon = findViewById(R.id.Monday);
         tues = findViewById(R.id.Tuesday);
